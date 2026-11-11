@@ -1,0 +1,41 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-ink: #0a0a0f;
+  --color-gold: #d4af37;
+  --color-gold-light: #e8c963;
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans: 'Inter', system-ui, 'Segoe UI', sans-serif;
+
+  --animate-fade-up: fade-up 0.8s ease both;
+
+  @keyframes fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-ink);
+  color: #f5f5f5;
+  font-family: var(--font-sans);
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
